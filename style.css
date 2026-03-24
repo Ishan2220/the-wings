@@ -116,6 +116,8 @@ h1, h2, h3, h4 { font-weight: 900; text-transform: uppercase; line-height: 1.05;
 .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent); transition: var(--fast-transition); }
 .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; box-shadow: 0 0 10px var(--accent); }
+.mobile-menu-toggle { display: none; background: none; border: none; color: var(--text-primary); cursor: pointer; transition: var(--fast-transition); padding: 0.5rem; }
+.mobile-menu-toggle:hover { color: var(--accent); }
 
 /* Cinematic Hero Section */
 .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 100px; overflow: hidden; }
@@ -251,7 +253,10 @@ h1, h2, h3, h4 { font-weight: 900; text-transform: uppercase; line-height: 1.05;
     .hero-buttons { justify-content: center; }
     .hero-visual { order: -1; margin-bottom: 2rem; }
     .section-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-    .nav-links { display: none; }
+    .mobile-menu-toggle { display: block; position: relative; z-index: 1001; }
+    .nav-links { display: flex; position: fixed; top: 0; right: -100%; width: 320px; max-width: 100vw; height: 100vh; flex-direction: column; align-items: center; justify-content: center; background: rgba(5,5,5,0.98); border-left: 1px solid var(--border); box-shadow: -30px 0 60px rgba(0,0,0,0.8); transition: var(--transition); z-index: 1000; padding: 2rem; gap: 3rem; pointer-events: none; }
+    .nav-links.active { right: 0; pointer-events: auto; }
+    .nav-links a { font-size: 1.5rem; letter-spacing: 2px; margin: 0; }
     .menu-grid { grid-template-columns: 1fr 1fr; }
     .signature-feature { padding: 3rem; margin: 0; border-radius: 30px; }
     .sauce-experience { margin: 0; border-radius: 30px; }
@@ -262,7 +267,7 @@ h1, h2, h3, h4 { font-weight: 900; text-transform: uppercase; line-height: 1.05;
 
 /* Extreme Responsiveness Upgrades (Mobile Phones) */
 @media (max-width: 768px) {
-    .nav-logo { height: 50px; } /* Prevent logo overflow on phones */
+    .nav-logo { height: 50px; }
     .brand { font-size: 1.4rem; }
     .hero { padding-top: 120px; }
     .hero-title { font-size: clamp(2.5rem, 12vw, 3.5rem); margin-bottom: 1rem; }
@@ -272,24 +277,35 @@ h1, h2, h3, h4 { font-weight: 900; text-transform: uppercase; line-height: 1.05;
     .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
     
     .section-padding { padding: 5rem 0; }
-    .section-title { font-size: clamp(2rem, 8vw, 3rem); text-align: left; }
+    .section-title { font-size: clamp(2rem, 8vw, 3rem); text-align: left; word-break: break-word; line-height: 1.1; }
     .section-subtitle { margin-bottom: 2rem; text-align: left; }
-    .bestseller-card { width: 320px; padding: 1rem; }
-    .card-content h3 { font-size: 1.5rem; }
+    
+    .horizontal-scroll { padding: 1.5rem calc(50vw - 42.5vw) 3rem calc(50vw - 42.5vw); margin: 0 -2rem; scroll-snap-type: x mandatory; }
+    .bestseller-card { width: 85vw; max-width: 320px; padding: 1.5rem; scroll-snap-align: center; }
+    .card-content h3 { font-size: 1.4rem; word-break: break-word; }
     
     .menu-grid { grid-template-columns: 1fr; gap: 1rem; }
     .menu-category-card { height: 200px; }
-    .menu-panel { padding: 1.5rem; }
-    .panel-title { font-size: 1.8rem; }
+    .menu-panel { padding: 1.5rem 1rem; }
+    .panel-header { align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+    .panel-title { font-size: clamp(1.4rem, 6vw, 1.8rem); line-height: 1.2; word-break: break-word; }
     .menu-items-grid { grid-template-columns: 1fr; gap: 1rem; }
     
-    .item-thumbnail { width: 70px; height: 70px; }
-    .item-info h4 { font-size: 1.05rem; }
-    .item-price { font-size: 1.15rem; }
+    .menu-item-card { padding: 0.8rem; gap: 0.8rem; }
+    .item-thumbnail { width: 60px; height: 60px; }
+    .item-info h4 { font-size: 1.05rem; word-break: break-word; line-height: 1.2; }
+    .item-price { font-size: 1.1rem; }
     
-    .signature-feature { padding: 2rem; border-radius: 20px; }
-    .sauce-chips { gap: 1rem; }
-    .sauce-chip { padding: 1rem 1.8rem; font-size: 0.9rem; }
+    .signature-feature { padding: 1.5rem; border-radius: 20px; }
+    .sig-text h2 { font-size: clamp(2rem, 9vw, 2.5rem); word-break: break-word; line-height: 1.1; }
+    .sig-text p { font-size: 1rem; }
+    
+    .sauce-experience { margin: 1rem; width: auto; padding: 4rem 0; border-radius: 20px; }
+    .sauce-chips { gap: 0.8rem; margin-top: 2.5rem; }
+    .sauce-chip { padding: 0.8rem 1.5rem; font-size: 0.85rem; }
+    
+    .modal-content { padding: 2rem 1.5rem; }
+    .phone-number { font-size: 1.6rem; }
 }
 
 /* Animations */

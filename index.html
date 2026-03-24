@@ -20,7 +20,10 @@
                 <!-- Enlarged logo implementation with high-visibility fallback typography -->
                 <img src="images/logo.png" alt="The Wings Logo" class="nav-logo" onerror="this.outerHTML='<span class=\'brand\'>THE WINGS</span>'">
             </a>
-            <div class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <a href="#bestsellers" class="nav-item">Bestsellers</a>
                 <a href="#menu" class="nav-item">Menu</a>
                 <a href="#experience" class="nav-item">Experience</a>
@@ -75,7 +78,7 @@
                 </div>
             </div>
             <div class="bestseller-card fade-in-scroll stagger-2">
-                <div class="card-img-wrapper"><img src="images/korean_wings.png" alt="Korean Glaze Wings"><div class="tag tag-star"><i data-lucide="star"></i> Signature</div></div>
+                <div class="card-img-wrapper"><img src="images/lucid-origin_“Crispy_chicken_wings_coated_in_glossy_Korean_spicy_sauce_deep_red_glaze_sesam-0.jpg" alt="Korean Glaze Wings"><div class="tag tag-star"><i data-lucide="star"></i> Signature</div></div>
                 <div class="card-content">
                     <h3>Korean Sticky Glaze</h3>
                     <p class="desc">Sweet, savory, and sticky wings perfectly topped with sesame seeds.</p>
@@ -91,7 +94,7 @@
                 </div>
             </div>
             <div class="bestseller-card fade-in-scroll stagger-4">
-                <div class="card-img-wrapper"><img src="images/menu_pizza.png" alt="Meat Lover Pizza"><div class="tag tag-hot"><i data-lucide="flame"></i> Loaded</div></div>
+                <div class="card-img-wrapper"><img src="images/Meat%20Lover%20Pizza.jpg" alt="Meat Lover Pizza"><div class="tag tag-hot"><i data-lucide="flame"></i> Loaded</div></div>
                 <div class="card-content">
                     <h3>Meat Lover Pizza</h3>
                     <p class="desc">Premium cinematic cheese packed with the ultimate meat toppings.</p>
@@ -134,7 +137,7 @@
                     </div>
                 </div>
                 <div class="menu-category-card fade-in-scroll stagger-4 category-trigger" data-target="panel-fried">
-                    <img src="images/fried_chicken.png" alt="Fried Chicken Category" class="cat-bg">
+                    <img src="images/fried_chicken_basket.png" alt="Fried Chicken Category" class="cat-bg">
                     <div class="cat-overlay"></div>
                     <div class="cat-content">
                         <h3>Fried Chicken</h3>
@@ -142,7 +145,7 @@
                     </div>
                 </div>
                 <div class="menu-category-card fade-in-scroll stagger-1 category-trigger" data-target="panel-pizza">
-                    <img src="images/menu_pizza.png" alt="Pizza Category" class="cat-bg" onerror="this.src='images/hero_wings.png'">
+                    <img src="images/Farmhouse%20Veg%20Pizza.jpg" alt="Pizza Category" class="cat-bg" onerror="this.src='images/hero_wings.png'">
                     <div class="cat-overlay"></div>
                     <div class="cat-content">
                         <h3>Pizza</h3>
@@ -150,7 +153,7 @@
                     </div>
                 </div>
                 <div class="menu-category-card fade-in-scroll stagger-2 category-trigger" data-target="panel-wraps">
-                    <img src="images/menu_wrap.png" alt="Wraps Category" class="cat-bg" onerror="this.src='images/fried_chicken.png'">
+                    <img src="images/fried_chicken_wrap.png" alt="Wraps Category" class="cat-bg" onerror="this.src='images/fried_chicken_basket.png'">
                     <div class="cat-overlay"></div>
                     <div class="cat-content">
                         <h3>Wraps</h3>
@@ -158,7 +161,7 @@
                     </div>
                 </div>
                 <div class="menu-category-card fade-in-scroll stagger-3 category-trigger" data-target="panel-drinks">
-                    <img src="images/menu_drink.png" alt="Drinks Category" class="cat-bg">
+                    <img src="images/mojito.png" alt="Drinks Category" class="cat-bg">
                     <div class="cat-overlay"></div>
                     <div class="cat-content">
                         <h3>Drinks</h3>
@@ -166,7 +169,7 @@
                     </div>
                 </div>
                 <div class="menu-category-card fade-in-scroll stagger-4 category-trigger" data-target="panel-desserts">
-                    <img src="images/menu_dessert.png" alt="Desserts Category" class="cat-bg" onerror="this.src='images/cajun_wings.png'">
+                    <img src="images/dessert_cheesecake.png" alt="Desserts Category" class="cat-bg" onerror="this.src='images/cajun_wings.png'">
                     <div class="cat-overlay"></div>
                     <div class="cat-content">
                         <h3>Desserts</h3>
@@ -185,13 +188,13 @@
                     </div>
                     <div class="menu-items-grid">
                         <div class="menu-item-card"><img src="images/fried-chicken-wings.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Regular Wings (6 pcs)</h4></div><div class="item-price">₹200</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_wings_heavenly_1774192071154.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Heavenly Wings (6 pcs)</h4></div><div class="item-price highlight">₹250</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Golden_crispy_chicken_wings_coated_in_creamy_rich_sauce_slightly_glossy_finis-0.jpg" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Heavenly Wings (6 pcs)</h4></div><div class="item-price highlight">₹250</div></div></div>
                         <div class="menu-item-card"><img src="images/grilled-chicken-wings.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Grilled Wings (6 pcs)</h4></div><div class="item-price">₹200</div></div></div>
                         <div class="menu-item-card"><img src="images/peri-peri-chicken-wings.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Cajun Wings</h4></div><div class="item-price">₹200</div></div></div>
-                        <div class="menu-item-card"><img src="images/korean_wings.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Korean Wings</h4></div><div class="item-price highlight">₹300</div></div></div>
-                        <div class="menu-item-card"><img src="images/korean_wings.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Alfresco Wings</h4></div><div class="item-price">₹300</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Crispy_chicken_wings_coated_in_glossy_Korean_spicy_sauce_deep_red_glaze_sesam-0.jpg" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Korean Wings</h4></div><div class="item-price highlight">₹300</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Crispy_fried_chicken_wings_coated_in_alfresco-style_seasoning_light_herb_glaz-0.jpg" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Alfresco Wings</h4></div><div class="item-price">₹300</div></div></div>
                         <div class="menu-item-card"><img src="images/spicy-tandoori-wings.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Tandoori Wings</h4></div><div class="item-price">₹300</div></div></div>
-                        <div class="menu-item-card"><img src="images/creamy-chicken-wings.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Butter Chicken Wings</h4></div><div class="item-price highlight">₹300</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Golden_crispy_chicken_wings_coated_in_creamy_rich_sauce_slightly_glossy_finis-0.jpg" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Butter Chicken Wings</h4></div><div class="item-price highlight">₹300</div></div></div>
                     </div>
                 </div>
                 <!-- BURGERS Panel -->
@@ -203,12 +206,12 @@
                     
                     <h4 class="sub-category-title">VEG BURGERS</h4>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card"><img src="images/veg-loaded-burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Golden Texas Burger</h4></div><div class="item-price">₹150</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_veg_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Garden Burger</h4></div><div class="item-price">₹140</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_veg_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Mexican Veg Cheese</h4></div><div class="item-price">₹140</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_veg_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Makhani Veg Cheese</h4></div><div class="item-price">₹140</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_veg_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Fiery Veg Cheese</h4></div><div class="item-price highlight">₹140</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_veg_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Paneer Makhani</h4></div><div class="item-price">₹170</div></div></div>
+                        <div class="menu-item-card"><img src="images/golden_texas_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Golden Texas Burger</h4></div><div class="item-price">₹150</div></div></div>
+                        <div class="menu-item-card"><img src="images/garden_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Garden Burger</h4></div><div class="item-price">₹140</div></div></div>
+                        <div class="menu-item-card"><img src="images/mexican_veg_cheese_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Mexican Veg Cheese</h4></div><div class="item-price">₹140</div></div></div>
+                        <div class="menu-item-card"><img src="images/makhani_veg_cheese_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Makhani Veg Cheese</h4></div><div class="item-price">₹140</div></div></div>
+                        <div class="menu-item-card"><img src="images/fiery_veg_cheese_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Fiery Veg Cheese</h4></div><div class="item-price highlight">₹140</div></div></div>
+                        <div class="menu-item-card"><img src="images/paneer_makhani_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Paneer Makhani</h4></div><div class="item-price">₹170</div></div></div>
                         <div class="menu-item-card"><img src="images/img_veg_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Paneer Fiery Cheese</h4></div><div class="item-price">₹170</div></div></div>
                     </div>
                     
@@ -216,14 +219,14 @@
                     <div class="menu-items-grid">
                         <div class="menu-item-card"><img src="images/crispy-chicken-burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Country Fried Chicken Burger</h4></div><div class="item-price">₹170</div></div></div>
                         <div class="menu-item-card"><img src="images/bbq-chicken-burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>BBQ Chicken Burger</h4></div><div class="item-price">₹170</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_chicken_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Fiery Chicken Burger</h4></div><div class="item-price highlight">₹170</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_chicken_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Hangover Chicken Burger</h4></div><div class="item-price">₹170</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Spicy_chicken_burger_with_crispy_fillet_coated_in_fiery_sauce_melted_cheese_j-0.jpg" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Fiery Chicken Burger</h4></div><div class="item-price highlight">₹170</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Loaded_chicken_burger_with_crispy_fillet_egg_layer_melted_cheese_sauces_dripp-0.jpg" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Hangover Chicken Burger</h4></div><div class="item-price">₹170</div></div></div>
                     </div>
                     <h4 class="sub-category-title">SIGNATURE BURGERS</h4>
                     <div class="menu-items-grid">
                         <div class="menu-item-card"><img src="images/menu_burger.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Roasted Chicken Burger</h4></div><div class="item-price">₹250</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_chicken_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Butter Chicken Burger</h4></div><div class="item-price">₹200</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_chicken_burger.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Korean Chicken Burger</h4></div><div class="item-price highlight">₹280</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Burger_with_butter_chicken_filling_rich_creamy_orange_gravy_coating_juicy_chi-0.jpg" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Butter Chicken Burger</h4></div><div class="item-price">₹200</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Crispy_chicken_burger_coated_in_glossy_Korean_sauce_deep_red_glaze_sesame_see-0.jpg" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Korean Chicken Burger</h4></div><div class="item-price highlight">₹280</div></div></div>
                         <div class="menu-item-card"><img src="images/double-chicken-cheese-burger.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Tall Boy Chicken Burger</h4></div><div class="item-price highlight">₹320</div></div></div>
                     </div>
                 </div>
@@ -236,17 +239,17 @@
                     
                     <h4 class="sub-category-title">FRIES</h4>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card"><img src="images/menu_fries.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Salted Fries</h4></div><div class="item-price">₹100</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_fries.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Peri Peri Fries</h4></div><div class="item-price">₹120</div></div></div>
+                        <div class="menu-item-card"><img src="images/fries_salted.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Salted Fries</h4></div><div class="item-price">₹100</div></div></div>
+                        <div class="menu-item-card"><img src="images/fries_periperi.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Peri Peri Fries</h4></div><div class="item-price">₹120</div></div></div>
                         <div class="menu-item-card"><img src="images/cheesy-fries.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Cheesy Fries</h4></div><div class="item-price">₹180</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_fries.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Mexican Fries</h4></div><div class="item-price">₹180</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_fries.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Loaded Fries</h4></div><div class="item-price highlight">₹280</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Crispy_golden_french_fries_topped_with_Mexican-style_toppings_—_melted_chee-0.jpg" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Mexican Fries</h4></div><div class="item-price">₹180</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Crispy_fries_topped_with_juicy_chicken_pieces_melted_cheese_mayo_drizzle_and_-0.jpg" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Loaded Fries</h4></div><div class="item-price highlight">₹280</div></div></div>
                     </div>
                     
                     <h4 class="sub-category-title">NACHOS</h4>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card"><img src="images/img_nachos.png" onerror="this.src='images/menu_fries.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Nachos & Salsa</h4></div><div class="item-price">₹100</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_nachos.png" onerror="this.src='images/menu_fries.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Ultimate Veg Nachos</h4></div><div class="item-price">₹200</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Crispy_golden_tortilla_nachos_served_with_a_fresh_bowl_of_red_salsa_dip_visib-0.jpg" onerror="this.src='images/menu_fries.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Nachos & Salsa</h4></div><div class="item-price">₹100</div></div></div>
+                        <div class="menu-item-card"><img src="images/lucid-origin_“Crispy_tortilla_nachos_fully_loaded_with_melted_cheese_jalapenos_diced_tomato-0.jpg" onerror="this.src='images/menu_fries.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Ultimate Veg Nachos</h4></div><div class="item-price">₹200</div></div></div>
                         <div class="menu-item-card"><img src="images/chicken-loaded-nachos.png" onerror="this.src='images/menu_fries.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Loaded Nachos</h4></div><div class="item-price highlight">₹250</div></div></div>
                     </div>
                 </div>
@@ -258,10 +261,10 @@
                         <button class="close-panel"><i data-lucide="x"></i></button>
                     </div>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card"><img src="images/fried_chicken.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Breast</h4></div><div class="item-price">₹200</div></div></div>
-                        <div class="menu-item-card"><img src="images/fried_chicken.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Fingers (5 pcs)</h4></div><div class="item-price">₹200</div></div></div>
-                        <div class="menu-item-card"><img src="images/hero_wings.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Popcorn</h4></div><div class="item-price highlight">₹200</div></div></div>
-                        <div class="menu-item-card"><img src="images/fried_chicken.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Rancher</h4></div><div class="item-price">₹300</div></div></div>
+                        <div class="menu-item-card"><img src="images/fried_chicken_breast.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Breast</h4></div><div class="item-price">₹200</div></div></div>
+                        <div class="menu-item-card"><img src="images/fried_chicken_fingers.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Fingers (5 pcs)</h4></div><div class="item-price">₹200</div></div></div>
+                        <div class="menu-item-card"><img src="images/fried_chicken_popcorn.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Popcorn</h4></div><div class="item-price highlight">₹200</div></div></div>
+                        <div class="menu-item-card"><img src="images/fried_chicken_rancher.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Rancher</h4></div><div class="item-price">₹300</div></div></div>
                     </div>
                 </div>
                 
@@ -273,14 +276,14 @@
                     </div>
                     <div class="menu-items-grid">
                         <div class="menu-item-card"><img src="images/menu_pizza.png" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Margherita</h4></div><div class="item-price">₹250</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_pizza.png" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Classic American Veg</h4></div><div class="item-price">₹270</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_pizza.png" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Farmhouse Veg</h4></div><div class="item-price highlight">₹400</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_pizza.png" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Paneer Tikka Cheese</h4></div><div class="item-price">₹400</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_pizza.png" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>BBQ Paneer Pizza</h4></div><div class="item-price">₹400</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_pizza.png" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Hot n Spicy Chicken</h4></div><div class="item-price highlight">₹400</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_pizza.png" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Mexican Chicken Cheese</h4></div><div class="item-price">₹400</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_pizza.png" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Butter Chicken Cheese</h4></div><div class="item-price">₹400</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_pizza.png" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Meat Lover Pizza</h4></div><div class="item-price highlight">₹450</div></div></div>
+                        <div class="menu-item-card"><img src="images/Classic%20American%20Veg%20Pizza.jpg" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Classic American Veg</h4></div><div class="item-price">₹270</div></div></div>
+                        <div class="menu-item-card"><img src="images/Farmhouse%20Veg%20Pizza.jpg" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Farmhouse Veg</h4></div><div class="item-price highlight">₹400</div></div></div>
+                        <div class="menu-item-card"><img src="images/Paneer%20Tikka%20Cheese%20Pizza.jpg" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Paneer Tikka Cheese</h4></div><div class="item-price">₹400</div></div></div>
+                        <div class="menu-item-card"><img src="images/BBQ%20Paneer%20Pizza.jpg" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>BBQ Paneer Pizza</h4></div><div class="item-price">₹400</div></div></div>
+                        <div class="menu-item-card"><img src="images/Hot%20n%20Spicy%20Chicken%20Pizza.jpg" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Hot n Spicy Chicken</h4></div><div class="item-price highlight">₹400</div></div></div>
+                        <div class="menu-item-card"><img src="images/Mexican%20Chicken%20Cheese%20Pizza.jpg" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Mexican Chicken Cheese</h4></div><div class="item-price">₹400</div></div></div>
+                        <div class="menu-item-card"><img src="images/Butter%20Chicken%20Cheese%20Pizza.jpg" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Butter Chicken Cheese</h4></div><div class="item-price">₹400</div></div></div>
+                        <div class="menu-item-card"><img src="images/Meat%20Lover%20Pizza.jpg" onerror="this.src='images/hero_wings.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Meat Lover Pizza</h4></div><div class="item-price highlight">₹450</div></div></div>
                     </div>
                 </div>
                 <!-- WRAPS Panel -->
@@ -290,12 +293,12 @@
                         <button class="close-panel"><i data-lucide="x"></i></button>
                     </div>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card"><img src="images/menu_wrap.png" onerror="this.src='images/fried_chicken.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Fried Chicken Wrap</h4></div><div class="item-price">₹270</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_wrap.png" onerror="this.src='images/fried_chicken.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Grilled Chicken Wrap</h4></div><div class="item-price">₹270</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_wrap.png" onerror="this.src='images/fried_chicken.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Kabab Wrap</h4></div><div class="item-price highlight">₹300</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_wrap.png" onerror="this.src='images/fried_chicken.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Detroit Chicken Toast</h4></div><div class="item-price">₹200</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_wrap.png" onerror="this.src='images/fried_chicken.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Jerk Chicken Toast</h4></div><div class="item-price">₹200</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_wrap.png" onerror="this.src='images/fried_chicken.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Cheese Masala Toast</h4></div><div class="item-price highlight">₹200</div></div></div>
+                        <div class="menu-item-card"><img src="images/fried_chicken_wrap.png" onerror="this.src='images/fried_chicken_basket.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Fried Chicken Wrap</h4></div><div class="item-price">₹270</div></div></div>
+                        <div class="menu-item-card"><img src="images/grilled_chicken_wrap.png" onerror="this.src='images/fried_chicken_basket.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Grilled Chicken Wrap</h4></div><div class="item-price">₹270</div></div></div>
+                        <div class="menu-item-card"><img src="images/chicken_kabab_wrap.png" onerror="this.src='images/fried_chicken_basket.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Kabab Wrap</h4></div><div class="item-price highlight">₹300</div></div></div>
+                        <div class="menu-item-card"><img src="images/detroit_chicken_toast.png" onerror="this.src='images/fried_chicken_basket.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Detroit Chicken Toast</h4></div><div class="item-price">₹200</div></div></div>
+                        <div class="menu-item-card"><img src="images/jerk_chicken_toast.png" onerror="this.src='images/fried_chicken_basket.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Jerk Chicken Toast</h4></div><div class="item-price">₹200</div></div></div>
+                        <div class="menu-item-card"><img src="images/chicken_cheese_masala_toast.png" onerror="this.src='images/fried_chicken_basket.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Chicken Cheese Masala Toast</h4></div><div class="item-price highlight">₹200</div></div></div>
                     </div>
                 </div>
                 
@@ -306,11 +309,11 @@
                         <button class="close-panel"><i data-lucide="x"></i></button>
                     </div>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card"><img src="images/menu_drink.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Lime Soda</h4></div><div class="item-price">₹120</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_drink.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Mojitos</h4></div><div class="item-price highlight">₹150</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_coffee.png" onerror="this.src='images/menu_drink.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Cold Coffee</h4></div><div class="item-price">₹150</div></div></div>
-                        <div class="menu-item-card"><img src="images/img_coffee.png" onerror="this.src='images/menu_drink.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Hazelnut Coffee</h4></div><div class="item-price">₹150</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_drink.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Oreo Shake</h4></div><div class="item-price highlight">₹180</div></div></div>
+                        <div class="menu-item-card"><img src="images/lime_soda.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Lime Soda</h4></div><div class="item-price">₹120</div></div></div>
+                        <div class="menu-item-card"><img src="images/mojito.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Mojitos</h4></div><div class="item-price highlight">₹150</div></div></div>
+                        <div class="menu-item-card"><img src="images/cold_coffee.png" onerror="this.src='images/menu_drink.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Cold Coffee</h4></div><div class="item-price">₹150</div></div></div>
+                        <div class="menu-item-card"><img src="images/hazelnut_coffee.png" onerror="this.src='images/menu_drink.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Hazelnut Coffee</h4></div><div class="item-price">₹150</div></div></div>
+                        <div class="menu-item-card"><img src="images/oreo_shake.png" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Oreo Shake</h4></div><div class="item-price highlight">₹180</div></div></div>
                     </div>
                 </div>
                 
@@ -321,10 +324,10 @@
                         <button class="close-panel"><i data-lucide="x"></i></button>
                     </div>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card"><img src="images/menu_dessert.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Brownie</h4></div><div class="item-price">₹100</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_dessert.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Brownie with Ice Cream</h4></div><div class="item-price highlight">₹150</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_dessert.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Cheesecake</h4></div><div class="item-price highlight">₹150</div></div></div>
-                        <div class="menu-item-card"><img src="images/menu_dessert.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Caramel Custard</h4></div><div class="item-price">₹140</div></div></div>
+                        <div class="menu-item-card"><img src="images/dessert_brownie_plain.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Brownie</h4></div><div class="item-price">₹100</div></div></div>
+                        <div class="menu-item-card"><img src="images/dessert_brownie_icecream.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Brownie with Ice Cream</h4></div><div class="item-price highlight">₹150</div></div></div>
+                        <div class="menu-item-card"><img src="images/dessert_cheesecake.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Cheesecake</h4></div><div class="item-price highlight">₹150</div></div></div>
+                        <div class="menu-item-card"><img src="images/dessert_custard.png" onerror="this.src='images/menu_burger.png'" class="item-thumbnail" alt="Thumb"><div class="item-content"><div class="item-info"><h4>Caramel Custard</h4></div><div class="item-price">₹140</div></div></div>
                     </div>
                 </div>
             </div>
@@ -341,7 +344,7 @@
                     <button class="btn btn-outline trigger-order" style="margin-top: 1.5rem">Order Portion</button>
                 </div>
                 <div class="sig-visual pointer-disabled">
-                    <img src="images/korean_wings.png" alt="Korean Wings Signature">
+                    <img src="images/lucid-origin_“Crispy_chicken_wings_coated_in_glossy_Korean_spicy_sauce_deep_red_glaze_sesam-0.jpg" alt="Korean Wings Signature">
                 </div>
             </div>
         </div>
@@ -387,7 +390,7 @@
         <div class="modal-content">
             <button class="modal-close" id="closeModal"><i data-lucide="x"></i></button>
             <h2>Call Now to Order</h2>
-            <p class="phone-number">+91 90000 00000</p>
+            <p class="phone-number">+91 98608 08779</p>
             <p class="modal-sub">Fast delivery & fresh pickup available.</p>
             <button class="btn btn-primary" id="callDemoBtn" style="margin-top: 1.5rem; width: 100%;">Call Now</button>
         </div>

@@ -127,20 +127,6 @@ sauceChips.forEach(chip => {
             sauceSection.style.boxShadow = `inset 0 0 250px ${shadow}`;
         }
     });
-    
-    chip.addEventListener('mouseleave', () => {
-        if(sauceSection) {
-            sauceSection.style.boxShadow = 'none';
-        }
-        const defaultActive = document.querySelector('.sauce-chip[data-color="#FFC107"]');
-        if (defaultActive) {
-            sauceChips.forEach(c => c.classList.remove('active'));
-            defaultActive.classList.add('active');
-            if(sauceSection) {
-                sauceSection.style.boxShadow = `inset 0 0 250px ${defaultActive.getAttribute('data-shadow')}`;
-            }
-        }
-    });
 });
 
 window.addEventListener('load', () => {
@@ -231,5 +217,37 @@ panelCloseBtns.forEach(btn => {
         setTimeout(() => {
             menuWrapper.style.display = 'none';
         }, 300); // Match transiton time
+    });
+});
+
+// Mobile Hamburger Menu functionality
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navLinksContainer = document.getElementById('navLinks');
+const navLinksArrayMobile = document.querySelectorAll('.nav-links a');
+
+if(mobileMenuToggle && navLinksContainer) {
+    mobileMenuToggle.addEventListener('click', () => {
+        navLinksContainer.classList.toggle('active');
+        const icon = mobileMenuToggle.querySelector('i');
+        if(navLinksContainer.classList.contains('active')) {
+            icon.setAttribute('data-lucide', 'x');
+        } else {
+            icon.setAttribute('data-lucide', 'menu');
+        }
+        lucide.createIcons();
+    });
+}
+
+// Close mobile menu when clicking a link
+navLinksArrayMobile.forEach(link => {
+    link.addEventListener('click', () => {
+        if(navLinksContainer && navLinksContainer.classList.contains('active')) {
+            navLinksContainer.classList.remove('active');
+            const icon = mobileMenuToggle.querySelector('i');
+            if(icon) {
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            }
+        }
     });
 });
