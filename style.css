@@ -31,7 +31,14 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
+.seo-heading {
+  position: absolute;
+  left: -9999px;
+}
 
+.hero {
+  margin-top: 40px;
+}
 /* Pointer Control for Modals/Glows to not block clicks */
 .pointer-disabled { pointer-events: none; }
 .hero-bg-accent, .hero-visual, .cta-bg-image, .cta-overlay-dark { pointer-events: none; }
